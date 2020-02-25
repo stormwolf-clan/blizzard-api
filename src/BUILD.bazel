@@ -1,0 +1,7 @@
+load("//tools:defaults.bzl", "ts_library")
+
+ts_library(
+    name = "src",
+    srcs = glob(["*.ts"]),
+    visibility = ["//:__subpackages__"],
+)
