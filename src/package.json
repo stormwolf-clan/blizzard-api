@@ -5,6 +5,6 @@
   "version": "0.0.0-PLACEHOLDER",
   "dependencies": {
     "tslib": "1.11.0",
-    "axios": "0.18.0"
+    "axios": "0.19.2"
   }
 }
