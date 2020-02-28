@@ -1,6 +1,6 @@
 {
-  "name": "blizzard",
-  "license": "MIT",
+  "name": "blizzard-client",
+  "private": true,
   "scripts": {
     "bazel:format": "buildifier -v --warnings=attr-cfg,attr-license,attr-non-empty,attr-output-default,attr-single-file,constant-glob,ctx-args,depset-iteration,depset-union,dict-concatenation,duplicated-name,filetype,git-repository,http-archive,integer-division,load,load-on-top,native-build,native-package,output-group,package-name,package-on-top,positional-args,redefined-variable,repository-name,same-origin-load,string-iteration,unused-variable",
     "bazel:format:all": "find . -type f \\( -name \"*.bzl\" -or -name WORKSPACE -or -name BUILD -or -name BUILD.bazel \\) ! -path \"*/node_modules/*\" | xargs buildifier -v --warnings=attr-cfg,attr-license,attr-non-empty,attr-output-default,attr-single-file,constant-glob,ctx-args,depset-iteration,depset-union,dict-concatenation,duplicated-name,filetype,git-repository,http-archive,integer-division,load,load-on-top,native-build,native-package,output-group,package-name,package-on-top,positional-args,redefined-variable,repository-name,same-origin-load,string-iteration,unused-variable",
@@ -26,11 +26,9 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "dependencies": {
-    "tslib": "1.11.0",
-    "axios": "0.18.0"
-  },
   "devDependencies": {
+    "tslib": "1.11.0",
+    "axios": "0.18.0",
     "@bazel/bazelisk": "1.3.0",
     "@commitlint/config-conventional": "8.3.3",
     "@typescript-eslint/eslint-plugin": "2.11.0",

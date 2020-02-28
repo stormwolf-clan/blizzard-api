@@ -1,5 +1,5 @@
 workspace(
-    name = "blizzard",
+    name = "blizzard_client",
     managed_directories = {"@npm": ["node_modules"]},
 )
 

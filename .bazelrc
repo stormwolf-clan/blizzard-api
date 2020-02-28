@@ -1,4 +1,5 @@
 build --symlink_prefix=dist/
+build:release --stamp --workspace_status_command=./tools/scripts/bazel_stamp_vars.sh
 
 # Specifies desired output mode for running tests.
 test --test_output=all
@@ -7,3 +8,4 @@ test --build_tests_only
 test --cache_test_results
 
 try-import %workspace%/.bazelrc.user
+

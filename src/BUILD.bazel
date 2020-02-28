@@ -1,7 +1,24 @@
 load("//tools:defaults.bzl", "ts_library")
+load("@build_bazel_rules_nodejs//:index.bzl", "pkg_npm")
 
 ts_library(
     name = "src",
     srcs = glob(["*.ts"]),
     visibility = ["//:__subpackages__"],
+)
+
+pkg_npm(
+    name = "npm",
+    srcs = [
+        "package.json",
+    ],
+    substitutions = {
+        "blizzard_client/src": "blizzard-client",
+    },
+    deps = [
+        "//:LICENSE",
+        "//:README.md",
+        "//src",
+        "//src/wow",
+    ],
 )

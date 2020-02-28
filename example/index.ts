@@ -1,4 +1,4 @@
-import { BlizzardClient } from '../src';
+import { BlizzardClient } from 'blizzard-client/wow';
 import { WorldOfWarcraftClient } from '../src/wow';
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
